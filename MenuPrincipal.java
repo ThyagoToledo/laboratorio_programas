@@ -13,22 +13,11 @@ public class MenuPrincipal {
     private static final String PASTA_N2 = "N2";
     private static final String EXTENSAO_JAVA = ".java";
     private static final String EXTENSAO_CLASS = ".class";
-    private static final String SEPARADOR = criarSeparador(60);
+    private static final String SEPARADOR = "============================================================";
     private static final int OPCAO_SAIR = 0;
 
     private static List<String> programasDisponiveis;
     private static Scanner scanner;
-
-    /**
-     * Cria um separador de caracteres repetidos.
-     */
-    private static String criarSeparador(int tamanho) {
-        StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < tamanho; i++) {
-            sb.append("=");
-        }
-        return sb.toString();
-    }
 
     /**
      * Método principal que inicia a aplicação.
