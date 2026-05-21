@@ -2,11 +2,9 @@
 
 Atividades da faculdade, separadas por pastas
 
-## 📋 Sumário de Atividades
+## � Sumário de Atividades
 
-### N2 - Exercícios de Lógica e Manipulação de Dados
-
-#### 1️⃣ Cálculos Geométricos (Senai_LLP_Variaveis_Geometria)
+### [1] Cálculos Geométricos (Senai_LLP_Variaveis_Geometria)
 
 Implementação de cálculos de área para diferentes formas geométricas:
 
@@ -18,21 +16,27 @@ Implementação de cálculos de área para diferentes formas geométricas:
 - [AreaTubo.java](N2/AreaTubo.java) - Calcula a área de um cilindro/tubo
 - [AreaBola.java](N2/AreaBola.java) - Calcula a área de uma esfera/bola
 
-#### 2️⃣ Simulador de Dados (Senai_LLP_Dados)
+#### Funcionalidades:
+- Validação robusta de entrada
+- Cálculos matemáticos precisos
+- Formatação de saída estruturada
+- Tratamento de exceções
+
+### [2] Simulador de Dados (Senai_LLP_Dados)
 
 - [SimuladorDados.java](N2/SimuladorDados.java) - Simula lançamento de um ou múltiplos dados com visualização gráfica
 
-**Funcionalidades:**
+#### Funcionalidades:
 - Gera números aleatórios entre 1 e 6 usando `Math.random()`
 - Exibe o desenho visual do resultado do dado
 - Calcula e exibe a soma total dos lançamentos
 - Interface interativa com validação de entrada
 
-#### 3️⃣ Livro de Receitas (Senai_LLP_File_LivroDeReceitas)
+### [3] Livro de Receitas (Senai_LLP_File_LivroDeReceitas)
 
 - [LivroDeReceitas.java](N2/LivroDeReceitas.java) - Aplicação para criar e armazenar receitas em arquivo
 
-**Funcionalidades:**
+#### Funcionalidades:
 - Captura nome da receita
 - Coleta ingredientes (descrição e quantidade)
 - Coleta instruções passo-a-passo
@@ -41,21 +45,21 @@ Implementação de cálculos de área para diferentes formas geométricas:
 
 ---
 
-## 🎯 Melhorias de Clean Code Implementadas
+## Standards de Código
 
-✅ Constantes nomeadas em vez de valores mágicos  
-✅ Validações robustas de entrada  
-✅ Métodos focados com responsabilidade única  
-✅ Documentação Javadoc completa  
-✅ Formatação com `printf()` para saída consistente  
-✅ Tratamento apropriado de exceções  
-✅ Uso de try-with-resources para gerenciamento de recursos  
-✅ Encapsulamento com métodos privados  
-✅ Nomes descritivos para variáveis e métodos
+Constantes nomeadas em vez de valores mágicos  
+Validações robustas de entrada  
+Métodos focados com responsabilidade única  
+Documentação Javadoc completa  
+Formatação com `printf()` para saída consistente  
+Tratamento apropriado de exceções  
+Uso de try-with-resources para gerenciamento de recursos  
+Encapsulamento com métodos privados  
+Nomes descritivos para variáveis e métodos
 
 ---
 
-## 📝 Como Usar
+## Como Usar
 
 ### Compilar
 ```bash
@@ -82,8 +86,8 @@ java -cp N2 LivroDeReceitas
 
 ---
 
-## 👤 Autor
-ThyagoToledo
+## Informações
 
-## 📅 Data
-Maio de 2026
+**Autor:** ThyagoToledo  
+**Data:** Maio de 2026  
+**Linguagem:** Java 8+
