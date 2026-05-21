@@ -98,12 +98,13 @@ Nomes descritivos para variáveis e métodos
 
 ### Compilar
 ```bash
-javac N2/*.java
-javac MenuPrincipal.java
+cd N2
+javac *.java
 ```
 
 ### Executar com Menu Interativo (Recomendado)
 ```bash
+cd N2
 java MenuPrincipal
 ```
 
@@ -114,20 +115,22 @@ Este comando abre um menu interativo que permite selecionar e executar qualquer 
 
 ### Executar Programas Individuais
 ```bash
+cd N2
+
 # Cálculos geométricos
-java -cp N2 AreaRetangulo
-java -cp N2 AreaTriangulo
-java -cp N2 AreaCirculo
-java -cp N2 AreaCaixa
-java -cp N2 AreaPiramide
-java -cp N2 AreaTubo
-java -cp N2 AreaBola
+java AreaRetangulo
+java AreaTriangulo
+java AreaCirculo
+java AreaCaixa
+java AreaPiramide
+java AreaTubo
+java AreaBola
 
 # Simulador de dados
-java -cp N2 SimuladorDados
+java SimuladorDados
 
 # Livro de receitas
-java -cp N2 LivroDeReceitas
+java LivroDeReceitas
 ```
 
 ---

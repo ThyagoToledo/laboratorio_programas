@@ -10,7 +10,6 @@ import java.util.Scanner;
  */
 public class MenuPrincipal {
 
-    private static final String PASTA_N2 = "N2";
     private static final String EXTENSAO_JAVA = ".java";
     private static final String EXTENSAO_CLASS = ".class";
     private static final String SEPARADOR = "============================================================";
@@ -37,19 +36,17 @@ public class MenuPrincipal {
     }
 
     /**
-     * Descobre todos os arquivos Java na pasta N2.
+     * Descobre todos os arquivos Java compilados no diretório atual.
      */
     private static void descobrirProgramas() throws IOException {
-        File pastaN2 = new File(PASTA_N2);
+        File diretorioAtual = new File(".").getAbsoluteFile();
 
-        if (!pastaExiste(pastaN2)) {
-            throw new IOException("Pasta N2 não encontrada no diretório atual");
-        }
-
-        File[] arquivos = pastaN2.listFiles((dir, name) -> name.endsWith(EXTENSAO_CLASS) && !name.contains("$"));
+        File[] arquivos = diretorioAtual.listFiles((dir, name) -> 
+            name.endsWith(EXTENSAO_CLASS) && !name.contains("$") && !name.equals("MenuPrincipal.class")
+        );
 
         if (arquivos == null || arquivos.length == 0) {
-            throw new IOException("Nenhum arquivo compilado encontrado em N2");
+            throw new IOException("Nenhum arquivo compilado encontrado");
         }
 
         for (File arquivo : arquivos) {
@@ -58,10 +55,6 @@ public class MenuPrincipal {
         }
 
         programasDisponiveis.sort(String::compareTo);
-    }
-
-    private static boolean pastaExiste(File pasta) {
-        return pasta.exists() && pasta.isDirectory();
     }
 
     /**
@@ -170,7 +163,6 @@ public class MenuPrincipal {
         try {
             ProcessBuilder pb = new ProcessBuilder(
                     "java",
-                    "-cp", PASTA_N2,
                     nomePrograma);
             pb.inheritIO();
             Process processo = pb.start();
