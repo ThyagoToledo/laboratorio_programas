@@ -11,7 +11,6 @@ import java.util.Scanner;
 public class MenuPrincipal {
 
     private static final String PASTA_N2 = "N2";
-    private static final String EXTENSAO_JAVA = ".java";
     private static final String EXTENSAO_CLASS = ".class";
     private static final String SEPARADOR = "============================================================";
     private static final int OPCAO_SAIR = 0;
