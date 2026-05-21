@@ -64,45 +64,27 @@ public class MenuPrincipal {
      * Encontra a pasta N2 procurando em múltiplos locais.
      */
     private static File encontrarPastaN2() {
-        // 1. Verifica no diretório atual
-        File n2 = new File(PASTA_N2);
-        if (n2.exists() && n2.isDirectory()) {
-            return n2;
-        }
-
-        // 2. Verifica no diretório pai (um nível acima)
-        File parent = new File("../" + PASTA_N2);
-        if (parent.exists() && parent.isDirectory()) {
-            return parent;
-        }
-
-        // 3. Tenta com path absoluto do diretório de trabalho
+        // 1. Tenta com path absoluto do diretório de trabalho
         File currentDir = new File(".").getAbsoluteFile();
-        n2 = new File(currentDir, PASTA_N2);
-        if (n2.exists() && n2.isDirectory()) {
+        File n2 = new File(currentDir, PASTA_N2);
+        if (n2.isDirectory()) {
             return n2;
         }
 
-        // 4. Tenta no diretório pai absoluto
+        // 2. Tenta no diretório pai absoluto
         File parentDir = currentDir.getParentFile();
         if (parentDir != null) {
             n2 = new File(parentDir, PASTA_N2);
-            if (n2.exists() && n2.isDirectory()) {
+            if (n2.isDirectory()) {
                 return n2;
             }
-        }
 
-        // 5. Procura no classpath
-        String classPath = System.getProperty("java.class.path");
-        if (classPath != null) {
-            String[] paths = classPath.split(File.pathSeparator);
-            for (String path : paths) {
-                File dir = new File(path).getParentFile();
-                if (dir != null) {
-                    n2 = new File(dir, PASTA_N2);
-                    if (n2.exists() && n2.isDirectory()) {
-                        return n2;
-                    }
+            // 3. Tenta no avô (2 níveis acima)
+            File grandparent = parentDir.getParentFile();
+            if (grandparent != null) {
+                n2 = new File(grandparent, PASTA_N2);
+                if (n2.isDirectory()) {
+                    return n2;
                 }
             }
         }
