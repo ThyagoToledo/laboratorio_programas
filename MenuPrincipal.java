@@ -39,10 +39,10 @@ public class MenuPrincipal {
      * Descobre todos os arquivos Java compilados na pasta N2.
      */
     private static void descobrirProgramas() throws IOException {
-        File pastaN2 = new File(PASTA_N2);
+        File pastaN2 = encontrarPastaN2();
 
-        if (!pastaN2.exists() || !pastaN2.isDirectory()) {
-            throw new IOException("Pasta N2 não encontrada");
+        if (pastaN2 == null || !pastaN2.exists() || !pastaN2.isDirectory()) {
+            throw new IOException("Pasta N2 não encontrada. Execute from project root or ensure N2 folder exists.");
         }
 
         File[] arquivos = pastaN2.listFiles((dir, name) -> name.endsWith(EXTENSAO_CLASS) && !name.contains("$")
@@ -58,6 +58,56 @@ public class MenuPrincipal {
         }
 
         programasDisponiveis.sort(String::compareTo);
+    }
+
+    /**
+     * Encontra a pasta N2 procurando em múltiplos locais.
+     */
+    private static File encontrarPastaN2() {
+        // 1. Verifica no diretório atual
+        File n2 = new File(PASTA_N2);
+        if (n2.exists() && n2.isDirectory()) {
+            return n2;
+        }
+
+        // 2. Verifica no diretório pai (um nível acima)
+        File parent = new File("../" + PASTA_N2);
+        if (parent.exists() && parent.isDirectory()) {
+            return parent;
+        }
+
+        // 3. Tenta com path absoluto do diretório de trabalho
+        File currentDir = new File(".").getAbsoluteFile();
+        n2 = new File(currentDir, PASTA_N2);
+        if (n2.exists() && n2.isDirectory()) {
+            return n2;
+        }
+
+        // 4. Tenta no diretório pai absoluto
+        File parentDir = currentDir.getParentFile();
+        if (parentDir != null) {
+            n2 = new File(parentDir, PASTA_N2);
+            if (n2.exists() && n2.isDirectory()) {
+                return n2;
+            }
+        }
+
+        // 5. Procura no classpath
+        String classPath = System.getProperty("java.class.path");
+        if (classPath != null) {
+            String[] paths = classPath.split(File.pathSeparator);
+            for (String path : paths) {
+                File dir = new File(path).getParentFile();
+                if (dir != null) {
+                    n2 = new File(dir, PASTA_N2);
+                    if (n2.exists() && n2.isDirectory()) {
+                        return n2;
+                    }
+                }
+            }
+        }
+
+        return null;
     }
 
     /**
