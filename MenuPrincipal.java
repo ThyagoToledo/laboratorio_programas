@@ -1,5 +1,3 @@
-package laboratorio_programas;
-
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -48,9 +46,8 @@ public class MenuPrincipal {
             throw new IOException("Pasta N2 não encontrada");
         }
 
-        File[] arquivos = pastaN2.listFiles((dir, name) -> 
-            name.endsWith(EXTENSAO_CLASS) && !name.contains("$") && !name.equals("MenuPrincipal.class")
-        );
+        File[] arquivos = pastaN2.listFiles((dir, name) -> name.endsWith(EXTENSAO_CLASS) && !name.contains("$")
+                && !name.equals("MenuPrincipal.class"));
 
         if (arquivos == null || arquivos.length == 0) {
             throw new IOException("Nenhum arquivo compilado encontrado em N2");

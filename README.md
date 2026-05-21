@@ -106,9 +106,17 @@ javac -cp N2 MenuPrincipal.java
 ```
 
 ### Executar com Menu Interativo (Recomendado)
+
+**Windows:**
 ```bash
-# A partir do diretório raiz do projeto
-java -cp . laboratorio_programas.MenuPrincipal
+# Duplo clique no arquivo run.bat
+# OU via terminal:
+java -cp ".;N2" MenuPrincipal
+```
+
+**Linux/Mac:**
+```bash
+java -cp ".:N2" MenuPrincipal
 ```
 
 Este comando abre um menu interativo que permite selecionar e executar qualquer programa:
