@@ -1,6 +1,4 @@
-import java.io.BufferedReader;
 import java.io.File;
-import java.io.InputStreamReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -15,11 +13,22 @@ public class MenuPrincipal {
     private static final String PASTA_N2 = "N2";
     private static final String EXTENSAO_JAVA = ".java";
     private static final String EXTENSAO_CLASS = ".class";
-    private static final String SEPARADOR = "=".repeat(60);
+    private static final String SEPARADOR = criarSeparador(60);
     private static final int OPCAO_SAIR = 0;
 
     private static List<String> programasDisponiveis;
     private static Scanner scanner;
+
+    /**
+     * Cria um separador de caracteres repetidos.
+     */
+    private static String criarSeparador(int tamanho) {
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < tamanho; i++) {
+            sb.append("=");
+        }
+        return sb.toString();
+    }
 
     /**
      * Método principal que inicia a aplicação.
@@ -48,9 +57,7 @@ public class MenuPrincipal {
             throw new IOException("Pasta N2 não encontrada no diretório atual");
         }
 
-        File[] arquivos = pastaN2.listFiles((dir, name) -> 
-            name.endsWith(EXTENSAO_CLASS) && !name.contains("$")
-        );
+        File[] arquivos = pastaN2.listFiles((dir, name) -> name.endsWith(EXTENSAO_CLASS) && !name.contains("$"));
 
         if (arquivos == null || arquivos.length == 0) {
             throw new IOException("Nenhum arquivo compilado encontrado em N2");
@@ -78,7 +85,7 @@ public class MenuPrincipal {
             limparTela();
             exibirCabecalho();
             exibirOpcoes();
-            
+
             int opcao = coletarOpcao();
 
             if (opcao == OPCAO_SAIR) {
@@ -125,18 +132,27 @@ public class MenuPrincipal {
      * Retorna a descrição de cada programa.
      */
     private static String obterDescricaoPrograma(String nomePrograma) {
-        return switch (nomePrograma) {
-            case "AreaRetangulo" -> "Calcula a área de um retângulo";
-            case "AreaTriangulo" -> "Calcula a área de um triângulo";
-            case "AreaCirculo" -> "Calcula a área de um círculo";
-            case "AreaCaixa" -> "Calcula a área de uma caixa";
-            case "AreaPiramide" -> "Calcula a área de uma pirâmide";
-            case "AreaTubo" -> "Calcula a área de um cilindro";
-            case "AreaBola" -> "Calcula a área de uma esfera";
-            case "SimuladorDados" -> "Simula lançamento de dados";
-            case "LivroDeReceitas" -> "Cria e salva receitas em arquivo";
-            default -> "Programa disponível";
-        };
+        if (nomePrograma.equals("AreaRetangulo")) {
+            return "Calcula a área de um retângulo";
+        } else if (nomePrograma.equals("AreaTriangulo")) {
+            return "Calcula a área de um triângulo";
+        } else if (nomePrograma.equals("AreaCirculo")) {
+            return "Calcula a área de um círculo";
+        } else if (nomePrograma.equals("AreaCaixa")) {
+            return "Calcula a área de uma caixa";
+        } else if (nomePrograma.equals("AreaPiramide")) {
+            return "Calcula a área de uma pirâmide";
+        } else if (nomePrograma.equals("AreaTubo")) {
+            return "Calcula a área de um cilindro";
+        } else if (nomePrograma.equals("AreaBola")) {
+            return "Calcula a área de uma esfera";
+        } else if (nomePrograma.equals("SimuladorDados")) {
+            return "Simula lançamento de dados";
+        } else if (nomePrograma.equals("LivroDeReceitas")) {
+            return "Cria e salva receitas em arquivo";
+        } else {
+            return "Programa disponível";
+        }
     }
 
     /**
@@ -144,7 +160,7 @@ public class MenuPrincipal {
      */
     private static int coletarOpcao() {
         System.out.print("Digite a opção desejada: ");
-        
+
         try {
             return Integer.parseInt(scanner.nextLine().trim());
         } catch (NumberFormatException e) {
@@ -164,10 +180,9 @@ public class MenuPrincipal {
 
         try {
             ProcessBuilder pb = new ProcessBuilder(
-                "java",
-                "-cp", PASTA_N2,
-                nomePrograma
-            );
+                    "java",
+                    "-cp", PASTA_N2,
+                    nomePrograma);
             pb.inheritIO();
             Process processo = pb.start();
             int codigoSaida = processo.waitFor();
@@ -220,7 +235,7 @@ public class MenuPrincipal {
     private static void limparTela() {
         try {
             String osName = System.getProperty("os.name").toLowerCase();
-            
+
             if (osName.contains("win")) {
                 new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
             } else {
