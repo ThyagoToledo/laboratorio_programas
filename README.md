@@ -98,19 +98,22 @@ Nomes descritivos para variáveis e métodos
 
 ### Compilar
 ```bash
-cd N2
-javac *.java
+# Compilar todos os programas em N2
+javac N2/*.java
+
+# Compilar MenuPrincipal na raiz (com acesso a N2)
+javac -cp N2 MenuPrincipal.java
 ```
 
 ### Executar com Menu Interativo (Recomendado)
 ```bash
-cd N2
-java MenuPrincipal
+# A partir do diretório raiz do projeto
+java -cp . laboratorio_programas.MenuPrincipal
 ```
 
 Este comando abre um menu interativo que permite selecionar e executar qualquer programa:
 - Menu com descrição de cada programa
-- Execução direta sem necessidade de comandos
+- Execução direta sem necessidade de comandos adicionais
 - Interface limpa e profissional
 
 ### Executar Programas Individuais
