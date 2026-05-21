@@ -1,7 +1,19 @@
 # LABORATÓRIO DE PROGRAMAÇÃO
 
 Atividades da faculdade, separadas por pastas
+---
 
+## Tecnologias Utilizadas
+
+![Java](https://img.shields.io/badge/Java-ED8B00?style=flat&logo=openjdk&logoColor=white)
+![Clean Code](https://img.shields.io/badge/Clean%20Code-4CAF50?style=flat&logo=checkmark&logoColor=white)
+![OOP](https://img.shields.io/badge/OOP-003D82?style=flat&logo=target&logoColor=white)
+![File I/O](https://img.shields.io/badge/File%20I/O-FF6B35?style=flat&logo=files&logoColor=white)
+![Math](https://img.shields.io/badge/Math%20Algorithms-9C27B0?style=flat&logo=calculator&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)
+
+---
 ## � Sumário de Atividades
 
 ### [1] Cálculos Geométricos (Senai_LLP_Variaveis_Geometria)
