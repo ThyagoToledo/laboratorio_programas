@@ -1,5 +1,6 @@
 /**
- * Calcula a área de figuras geométricas tridimensionais do tipo pirâmide quadrangular.
+ * Calcula a área de figuras geométricas tridimensionais do tipo pirâmide
+ * quadrangular.
  * Implementa o cálculo considerando a base quadrada e 4 faces triangulares.
  */
 public class AreaPiramide {
@@ -15,7 +16,8 @@ public class AreaPiramide {
      * @param aresta aresta da base da pirâmide (deve ser positiva)
      * @param altura altura da pirâmide (deve ser positiva)
      * @return área total da pirâmide
-     * @throws IllegalArgumentException se aresta ou altura forem menores ou iguais a zero
+     * @throws IllegalArgumentException se aresta ou altura forem menores ou iguais
+     *                                  a zero
      */
     public static double calcularArea(double aresta, double altura) {
         validarDimensoes(aresta, altura);

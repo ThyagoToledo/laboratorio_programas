@@ -57,6 +57,29 @@ Implementação de cálculos de área para diferentes formas geométricas:
 
 ---
 
+---
+
+## Menu Principal
+
+[MenuPrincipal.java](MenuPrincipal.java) - Aplicação menu interativa para executar todos os programas
+
+#### Funcionalidades:
+- Descobre automaticamente todos os programas compilados na pasta N2
+- Interface visual limpa e intuitiva
+- Menu numerado com descrição de cada programa
+- Executa programas sem necessidade de linha de comando
+- Limpeza de tela entre execuções
+- Navegação fácil entre programas
+
+#### Como usar:
+```bash
+javac N2/*.java
+javac MenuPrincipal.java
+java MenuPrincipal
+```
+
+---
+
 ## Standards de Código
 
 Constantes nomeadas em vez de valores mágicos  
@@ -76,9 +99,20 @@ Nomes descritivos para variáveis e métodos
 ### Compilar
 ```bash
 javac N2/*.java
+javac MenuPrincipal.java
 ```
 
-### Executar
+### Executar com Menu Interativo (Recomendado)
+```bash
+java MenuPrincipal
+```
+
+Este comando abre um menu interativo que permite selecionar e executar qualquer programa:
+- Menu com descrição de cada programa
+- Execução direta sem necessidade de comandos
+- Interface limpa e profissional
+
+### Executar Programas Individuais
 ```bash
 # Cálculos geométricos
 java -cp N2 AreaRetangulo

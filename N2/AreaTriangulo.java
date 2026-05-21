@@ -14,7 +14,8 @@ public class AreaTriangulo {
      * @param base   base do triângulo (deve ser positiva)
      * @param altura altura do triângulo (deve ser positiva)
      * @return área do triângulo
-     * @throws IllegalArgumentException se base ou altura forem menores ou iguais a zero
+     * @throws IllegalArgumentException se base ou altura forem menores ou iguais a
+     *                                  zero
      */
     public static double calcularArea(double base, double altura) {
         validarDimensoes(base, altura);

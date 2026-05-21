@@ -132,7 +132,8 @@ public class LivroDeReceitas {
         if (!ingredientes.isEmpty()) {
             for (int i = 0; i < ingredientes.size(); i++) {
                 Ingrediente ing = ingredientes.get(i);
-                writer.write(String.format("%d. %s - %s%n", i + INDICE_PRIMEIRO, ing.getDescricao(), ing.getQuantidade()));
+                writer.write(
+                        String.format("%d. %s - %s%n", i + INDICE_PRIMEIRO, ing.getDescricao(), ing.getQuantidade()));
             }
             writer.write("\n");
         }

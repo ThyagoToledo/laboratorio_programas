@@ -1,5 +1,6 @@
 /**
- * Calcula a área de figuras geométricas tridimensionais do tipo caixa (paralelepípedo).
+ * Calcula a área de figuras geométricas tridimensionais do tipo caixa
+ * (paralelepípedo).
  * Implementa o cálculo: 2(ab + ac + bc) onde a, b, c são as dimensões
  */
 public class AreaCaixa {

@@ -13,7 +13,8 @@ public class AreaRetangulo {
      * @param largura largura do retângulo (deve ser positiva)
      * @param altura  altura do retângulo (deve ser positiva)
      * @return área do retângulo
-     * @throws IllegalArgumentException se largura ou altura forem menores ou iguais a zero
+     * @throws IllegalArgumentException se largura ou altura forem menores ou iguais
+     *                                  a zero
      */
     public static double calcularArea(double largura, double altura) {
         validarDimensoes(largura, altura);

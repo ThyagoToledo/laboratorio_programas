@@ -1,5 +1,6 @@
 /**
- * Calcula a área de figuras geométricas tridimensionais do tipo tubo (cilindro).
+ * Calcula a área de figuras geométricas tridimensionais do tipo tubo
+ * (cilindro).
  * Implementa o cálculo: 2πr² + 2πrh (duas bases + área lateral)
  */
 public class AreaTubo {
@@ -14,7 +15,8 @@ public class AreaTubo {
      * @param raio   raio do cilindro (deve ser positivo)
      * @param altura altura do cilindro (deve ser positiva)
      * @return área total do cilindro
-     * @throws IllegalArgumentException se raio ou altura forem menores ou iguais a zero
+     * @throws IllegalArgumentException se raio ou altura forem menores ou iguais a
+     *                                  zero
      */
     public static double calcularArea(double raio, double altura) {
         validarDimensoes(raio, altura);
