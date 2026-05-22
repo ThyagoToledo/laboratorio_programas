@@ -1,5 +1,9 @@
 # LABORATÓRIO DE PROGRAMAÇÃO
 
+<p align="center">
+  <img src="img/laboratorio.jpg" alt="Laboratório de Programação" width="100%" style="max-width: 800px; border-radius: 10px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);" />
+</p>
+
 Atividades da faculdade, separadas por pastas
 ---
 
@@ -14,7 +18,8 @@ Atividades da faculdade, separadas por pastas
 ![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)
 
 ---
-## � Sumário de Atividades
+
+## Sumário de Atividades
 
 ### [1] Cálculos Geométricos (Senai_LLP_Variaveis_Geometria)
 
@@ -57,11 +62,9 @@ Implementação de cálculos de área para diferentes formas geométricas:
 
 ---
 
----
-
 ## Menu Principal
 
-[MenuPrincipal.java](MenuPrincipal.java) - Aplicação menu interativa para executar todos os programas
+- [MenuPrincipal.java](MenuPrincipal.java) - Aplicação menu interativa para executar todos os programas
 
 #### Funcionalidades:
 - Descobre automaticamente todos os programas compilados na pasta N2
@@ -82,15 +85,15 @@ java MenuPrincipal
 
 ## Standards de Código
 
-Constantes nomeadas em vez de valores mágicos  
-Validações robustas de entrada  
-Métodos focados com responsabilidade única  
-Documentação Javadoc completa  
-Formatação com `printf()` para saída consistente  
-Tratamento apropriado de exceções  
-Uso de try-with-resources para gerenciamento de recursos  
-Encapsulamento com métodos privados  
-Nomes descritivos para variáveis e métodos
+* Constantes nomeadas em vez de valores mágicos
+* Validações robustas de entrada
+* Métodos focados com responsabilidade única
+* Documentação Javadoc completa
+* Formatação com `printf()` para saída consistente
+* Tratamento apropriado de exceções
+* Uso de try-with-resources para gerenciamento de recursos
+* Encapsulamento com métodos privados
+* Nomes descritivos para variáveis e métodos
 
 ---
 

@@ -1,0 +1,5 @@
+# Compilados Java
+*.class
+
+# Logs
+*.log
