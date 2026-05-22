@@ -1,15 +1,27 @@
 # LABORATÓRIO DE PROGRAMAÇÃO
 
+Atividades da faculdade, separadas por pastas
+
+## Tecnologias Utilizadas
+
+![Java](https://img.shields.io/badge/Java-ED8B00?style=flat&logo=openjdk&logoColor=white)
+![Clean Code](https://img.shields.io/badge/Clean%20Code-4CAF50?style=flat&logo=checkmark&logoColor=white)
+![OOP](https://img.shields.io/badge/OOP-003D82?style=flat&logo=target&logoColor=white)
+![File I/O](https://img.shields.io/badge/File%20I/O-FF6B35?style=flat&logo=files&logoColor=white)
+![Math](https://img.shields.io/badge/Math%20Algorithms-9C27B0?style=flat&logo=calculator&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)
+
+---
+
 <p align="center">
   <img src="img/laboratorio.jpg" alt="Laboratório de Programação" width="60%" style="max-width: 450px; border-radius: 10px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);" />
 </p>
 
-Atividades da faculdade, separadas por pastas
 ---
 
 ## Índice de Tópicos
 
-* [Tecnologias Utilizadas](#tecnologias-utilizadas)
 * [Sumário de Atividades](#sumário-de-atividades)
   * [[1] Cálculos Geométricos](#1-cálculos-geométricos-senai_llp_variaveis_geometria)
     * [AreaRetangulo.java (Área do Retângulo)](N2/AreaRetangulo.java)
@@ -32,18 +44,6 @@ Atividades da faculdade, separadas por pastas
   * [Executar com Menu Interativo (Recomendado)](#executar-com-menu-interativo-recomendado)
   * [Executar Programas Individuais](#executar-programas-individuais)
 * [Informações](#informações)
-
----
-
-## Tecnologias Utilizadas
-
-![Java](https://img.shields.io/badge/Java-ED8B00?style=flat&logo=openjdk&logoColor=white)
-![Clean Code](https://img.shields.io/badge/Clean%20Code-4CAF50?style=flat&logo=checkmark&logoColor=white)
-![OOP](https://img.shields.io/badge/OOP-003D82?style=flat&logo=target&logoColor=white)
-![File I/O](https://img.shields.io/badge/File%20I/O-FF6B35?style=flat&logo=files&logoColor=white)
-![Math](https://img.shields.io/badge/Math%20Algorithms-9C27B0?style=flat&logo=calculator&logoColor=white)
-![Git](https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white)
-![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)
 
 ---
 
