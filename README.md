@@ -1,7 +1,7 @@
 # LABORATÓRIO DE PROGRAMAÇÃO
 
 <p align="center">
-  <img src="img/laboratorio.jpg" alt="Laboratório de Programação" width="100%" style="max-width: 800px; border-radius: 10px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);" />
+  <img src="img/laboratorio.jpg" alt="Laboratório de Programação" width="60%" style="max-width: 450px; border-radius: 10px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);" />
 </p>
 
 Atividades da faculdade, separadas por pastas
