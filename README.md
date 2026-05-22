@@ -7,6 +7,24 @@
 Atividades da faculdade, separadas por pastas
 ---
 
+## Índice de Tópicos
+
+* [Tecnologias Utilizadas](#tecnologias-utilizadas)
+* [Sumário de Atividades](#sumário-de-atividades)
+  * [[1] Cálculos Geométricos](#1-cálculos-geométricos-senai_llp_variaveis_geometria)
+  * [[2] Simulador de Dados](#2-simulador-de-dados-senai_llp_dados)
+  * [[3] Livro de Receitas](#3-livro-de-receitas-senai_llp_file_livro-de-receitas)
+  * [[4] Análise de Texto](#4-análise-de-texto-senai_llp_analise-texto)
+* [Menu Principal](#menu-principal)
+* [Standards de Código](#standards-de-código)
+* [Como Usar](#como-usar)
+  * [Compilar](#compilar)
+  * [Executar com Menu Interativo (Recomendado)](#executar-com-menu-interativo-recomendado)
+  * [Executar Programas Individuais](#executar-programas-individuais)
+* [Informações](#informações)
+
+---
+
 ## Tecnologias Utilizadas
 
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=flat&logo=openjdk&logoColor=white)
@@ -59,6 +77,16 @@ Implementação de cálculos de área para diferentes formas geométricas:
 - Coleta instruções passo-a-passo
 - Salva em arquivo de texto (.txt) com formatação estruturada
 - Exibe a receita no console antes de salvar
+
+### [4] Análise de Texto (Senai_LLP_AnaliseTexto)
+
+- [Atividade01.java](N2/Atividade01.java) - Realiza análise estatística de um texto informado como argumento no console
+
+#### Funcionalidades:
+- Contagem total de palavras no texto informado
+- Contagem total de vogais (sem acentuação)
+- Identificação e contagem de palavras com quantidade de letras pares e ímpares
+- Validação robusta de argumentos fornecidos via console
 
 ---
 
@@ -145,6 +173,9 @@ java SimuladorDados
 
 # Livro de receitas
 java LivroDeReceitas
+
+# Análise de texto (requer argumento)
+java Atividade01 "Digite o seu texto de teste aqui"
 ```
 
 ---

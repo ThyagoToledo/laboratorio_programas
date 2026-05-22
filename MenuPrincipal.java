@@ -167,6 +167,8 @@ public class MenuPrincipal {
             return "Simula lançamento de dados";
         } else if (nomePrograma.equals("LivroDeReceitas")) {
             return "Cria e salva receitas em arquivo";
+        } else if (nomePrograma.equals("Atividade01")) {
+            return "Analisa palavras e vogais em um texto";
         } else {
             return "Programa disponível";
         }
